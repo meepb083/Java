@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตรวจสอบเลขคู่เลขคี่</title>
+</head>
+<body>
+    <input type="text" id="number">
+    <button onclick="a()">ตรวจสอบ</button>
+    <div id="result"></div>
+
+    <script>
+        function a() {
+            let number = document.getElementById("number").value;
+
+            if (number % 2 == 0) {
+                document.getElementById("result").innerHTML = "เลขคู่";
+            } else {
+                document.getElementById("result").innerHTML = "เลขคี่";
+            }
+        }
+    </script>
+</body>
+</html>
