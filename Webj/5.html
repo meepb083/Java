@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>นับจำนวนคลิก</title>
+</head>
+<body>
+
+    <h2>นับจำนวนคลิก</h2>
+
+    <button onclick="countClick()">Click me</button>
+
+    <div id="result">0</div>
+
+    <script>
+        let count = 0;
+
+        function countClick() {
+            count++;
+            document.getElementById("result").innerHTML = count;
+        }
+    </script>
+
+</body>
+</html>
