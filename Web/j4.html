@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เปลี่ยนสีพื้นหลัง</title>
+</head>
+<body>
+
+    <h2>เปลี่ยนสีพื้นหลัง</h2>
+
+    <button onclick="changeColor('red')">แดง</button>
+    <button onclick="changeColor('green')">เขียว</button>
+    <button onclick="changeColor('blue')">น้ำเงิน</button>
+
+    <div id="box" style="width: 300px; height: 200px; margin-top: 20px; background-color: lightgray;">
+    </div>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById("box").style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+</html>
