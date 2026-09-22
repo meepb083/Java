@@ -1,0 +1,83 @@
+package Student;
+public class Main {
+
+    public static void main(String[] args) {
+
+        StudentManager manager = new StudentManager();
+
+        // เพิ่มนักศึกษา 5 คน
+        manager.addStudent(new Student("001", "Somchai", 3.25));
+        manager.addStudent(new Student("002", "Somsri", 3.75));
+        manager.addStudent(new Student("003", "Somsak", 2.80));
+        manager.addStudent(new Student("004", "Somying", 3.50));
+        manager.addStudent(new Student("005", "Somchai2", 3.00));
+
+        // แสดงนักศึกษาทั้งหมด
+        manager.showAllStudents();
+
+
+        // =========================
+        // SEARCH
+        // =========================
+
+        System.out.println("\n=== SEARCH ===");
+
+        Student student = manager.findStudentById("002");
+
+        if (student != null) {
+            student.showInfo();
+        } else {
+            System.out.println("ไม่พบข้อมูล");
+        }
+
+
+        // ค้นหา ID ที่ไม่มี
+        System.out.println("\n=== SEARCH NOT FOUND ===");
+
+        student = manager.findStudentById("999");
+
+        if (student != null) {
+            student.showInfo();
+        } else {
+            System.out.println("ไม่พบข้อมูล");
+        }
+
+
+        // =========================
+        // REMOVE
+        // =========================
+
+        System.out.println("\n=== REMOVE ===");
+
+        boolean result = manager.removeStudentById("002");
+
+        if (result) {
+            System.out.println("ลบข้อมูลสำเร็จ");
+        } else {
+            System.out.println("ไม่พบข้อมูลที่ต้องการลบ");
+        }
+
+
+        // =========================
+        // AFTER REMOVE
+        // =========================
+
+        System.out.println("\n=== AFTER REMOVE ===");
+
+        manager.showAllStudents();
+
+        System.out.println();
+        System.out.println("จำนวนสมาชิกทั้งหมด: "+manager.countStudents());
+
+        // ทดลองลบ ID ที่ไม่มี
+        System.out.println("\n=== REMOVE NOT FOUND ===");
+
+        result = manager.removeStudentById("999");
+
+        if (result) {
+            System.out.println("ลบข้อมูลสำเร็จ");
+        } else {
+            System.out.println("ไม่พบข้อมูลที่ต้องการลบ");
+        }
+    }
+}
