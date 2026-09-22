@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ฟังก์ชันบวกเลข</title>
+</head>
+<body>
+
+    <h2>ฟังก์ชันบวกเลข</h2>
+
+    <input type="number" id="num1" placeholder="ตัวเลขที่ 1">
+    <input type="number" id="num2" placeholder="ตัวเลขที่ 2">
+
+    <button onclick="calculate()">คำนวณ</button>
+
+    <div id="result"></div>
+
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function calculate() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            let sum = add(a, b);
+
+            document.getElementById("result").innerHTML = "ผลรวม = " + sum;
+        }
+    </script>
+
+</body>
+</html>
