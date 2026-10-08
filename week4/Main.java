@@ -26,7 +26,7 @@ public class Main {
 
         System.out.println();
 
-        Elephant elephant = new Elephant("Messi", 10, 150.0);
+        Elephant elephant = new Elephant("Phaitong", 10, 150.0);
 
         System.out.println("======== Elephant ========");
         elephant.eat();
@@ -37,7 +37,7 @@ public class Main {
 
         System.out.println();
 
-        Monkey monkey = new Monkey("Haaland", 4, "กล้วย");
+        Monkey monkey = new Monkey("Luffy", 4, "กล้วย");
 
         System.out.println("======== Monkey ========");
         monkey.eat();
