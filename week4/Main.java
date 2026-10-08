@@ -4,7 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        
         Dog dog = new Dog("Doode", 3, "Poodle");
 
         System.out.println("======== Dog ========");
@@ -16,7 +15,6 @@ public class Main {
 
         System.out.println();
 
-        
         Cat cat = new Cat("Jijee", 9, "White-Black");
 
         System.out.println("======== Cat ========");
@@ -28,28 +26,24 @@ public class Main {
 
         System.out.println();
 
-        
-        Goat goat = new Goat("Messi", 2, "โค้ง");
+        Elephant elephant = new Elephant("Messi", 10, 150.0);
 
-        System.out.println("======== Goat ========");
-        goat.eat();
-        goat.bleat();
-        goat.sleep();
-        goat.showHornType();
-        goat.excrete();
-        goat.showCharacteristics();
+        System.out.println("======== Elephant ========");
+        elephant.eat();
+        elephant.trumpet();
+        elephant.sleep();
+        elephant.showTrunkLength();
+        elephant.excrete();
 
         System.out.println();
 
-        
-        Lion lion = new Lion("Haaland", 5, "สีทอง");
+        Monkey monkey = new Monkey("Haaland", 4, "กล้วย");
 
-        System.out.println("======== Lion ========");
-        lion.eat();
-        lion.roar();
-        lion.sleep();
-        lion.showManeColor();
-        lion.excrete();
-        lion.showCharacteristics();
+        System.out.println("======== Monkey ========");
+        monkey.eat();
+        monkey.chatter();
+        monkey.sleep();
+        monkey.showFavoriteFruit();
+        monkey.excrete();
     }
 }
